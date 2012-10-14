@@ -15,8 +15,8 @@ public class PrintClient {
       private String vArquivo;
       
       public static void main(String[] args) {
-          PrintClient pc = new PrintClient("Lucas","1234","Mensagem a ser impressa");
-          pc.enviar("127.0.0.1", 4000);
+          PrintClient pc = new PrintClient(args[0],args[1],"Mensagem a ser impressa");
+          pc.enviar(args[2], 4000);
       }
       
       public PrintClient(String login,String senha,String arquivo){
@@ -36,8 +36,4 @@ public class PrintClient {
               ex.printStackTrace();
           }
       }
-      
-      //public String getStatusImpressao(){
-      //    return new String();
-      //}
 }
